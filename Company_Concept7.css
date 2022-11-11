@@ -1,0 +1,202 @@
+.grid_container{
+    display: grid;
+    grid-template-areas:
+        "table table table aside "
+        "table table table aside"
+        "table table table aside"
+        "footer footer footer footer";
+}
+.grid_container table{
+    height: 300px;
+    grid-area: table;
+    background-color: var(--dark_sky_blue);
+}
+.grid_container aside{
+    grid-area: aside;
+    background-color: var(--dark_sky_blue);
+}
+.grid_container footer{
+    height: 80px;
+    display: flex;    
+    grid-area: footer;
+    background-color: var(--black );
+}
+.grid_container footer p{
+    padding: 0 100px;
+    font-size: var(--A);
+    font-family: var(--QICK);
+    color: var(--white);
+    align-self: center;
+}
+.grid_container footer p::selection{
+    color: var(--black);
+    background-color: var(--sky_blue_gray);
+}
+.img_logos{
+    position: absolute;
+    right: 100px;
+    margin-top: 20px;
+}
+.img_logos img{
+    height: 15px;
+    width: 15px;
+    margin: 0 10px;
+    padding:10px;
+    border: 2px solid var(--white);
+}
+.img_logos img:hover{
+    cursor: pointer;
+    transition: all 2s;
+    margin:0  15px;
+    border-radius: 100%;
+}
+.img_logos img::selection{
+    color: var(--black);
+    background-color: var(--sky_blue_gray);
+}
+.logos_aside{
+    display: flex;
+}
+.logos_aside p{
+    color: var(--light_gray);
+    display: flex;
+    flex-direction: column;
+    margin: 0;
+}
+.logos_aside p::selection{
+    color: var(--black);
+    background-color: var(--sky_blue_gray);
+}
+.aside_img{
+    display: flex;
+    justify-content: space-evenly;
+    flex-direction: column;
+}
+.aside_img img{
+    margin: 0 15px;
+    filter: contrast(0);
+}   
+.aside_img img:hover{
+    cursor: pointer;
+    filter: brightness(100);
+}
+.aside_img img::selection{
+    background-color: var(--sky_blue_gray);
+}
+.lista_table td{
+    width: 100px;
+}
+.lista_table a{
+    text-decoration: none;
+    color: var(--light_gray);
+    font-family: var(-QICK);
+    font-size: var(--A);
+    font-weight: 400;
+    margin-left: 70px;
+    margin-right: 0;
+}
+.lista_table a:hover{
+    transition: all 1s;
+    color: var(--white);
+    font-size: 19px;
+    margin-left: 60px;  
+}
+.lista_table a::selection{
+    color: var(--black);
+    background-color: var(--sky_blue_gray);
+}
+.parraf{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+}
+@media screen and (min-width: 800px) AND (max-width:1210px){
+    .lista_table a{
+        font-size: 15px;    
+        margin-left: 10px;
+    }
+    .lista_table a:hover{   
+        font-size: 16px;
+        margin-left: 15px;  
+    }
+    .lista_table td{
+        width: 100px;
+    }
+    .grid_container footer p{
+        padding: 0 20px;
+        font-size: var(--A);
+        font-family: var(--QICK);
+        color: var(--white);
+        align-self: center;
+    }
+}
+@media (max-width: 799px){
+    .lista_table a{
+        font-size: 15px;    
+        margin-left: 5px;
+    }
+    .lista_table a:hover{   
+        font-size: 16px;
+        margin-left: 10px;  
+    }
+    .grid_container footer {
+        flex-direction: column;
+    } 
+    .img_logos{
+        align-self: center;
+        margin: 0 auto;
+        position: inherit;
+    }
+    .img_logos img{
+        height: 10px;
+        width: 10px;
+        margin: 0 5px;
+        align-self: center;
+    }
+    .img_logos img:hover{
+        cursor: pointer;
+        transition: all 2s;
+        margin:0  15px;
+        border-radius: 100%;
+    }
+    .grid_container footer p{
+        padding: 0;
+        font-size: 76%;
+        align-self: center; 
+        display: table;  
+        margin: 10px auto;
+    }
+}
+@media (max-width: 499px){
+    .grid_container{
+        display: grid;
+        grid-template-areas:
+            "table table table table "
+            "table table table table"
+            "aside aside aside aside"
+            "footer footer footer footer";
+    }
+    .parraf{
+        display: flex;
+    }
+    .logos_aside{
+        justify-content: center;
+        padding-bottom: 20px;
+    }
+}
+@media (max-width: 399px){
+    .lista_table a{
+        font-size: 12px;    
+        margin-left: 5px;
+    }
+    .lista_table a:hover{   
+        font-size: 14px;
+        margin-left: 10px;  
+    }
+    .lista_table td{
+        width: auto;
+    }
+    .grid_container footer{
+        height: auto;
+    }
+}

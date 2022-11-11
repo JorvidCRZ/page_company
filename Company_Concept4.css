@@ -1,0 +1,144 @@
+.fondo3{
+    position: relative;
+    width: 100%;
+    height: 885px;
+    display: flex;
+    text-align: center;
+    background-color: var(--dark_sky_blue1);
+    flex-direction: column;
+    margin: 0;
+}
+.aside{
+    padding-top: 80px;
+}
+.aside h1::selection, .aside p::selection{
+    color: var(--black);
+    background-color: var(--sky_blue_gray);
+}   
+.aside h1{
+    letter-spacing: 2px;
+    color: var(--white);
+    font-size: 45px;
+    font-family: var(--GURM);
+    font-weight: 400;
+}
+.aside p{
+    display: table;
+    margin: 22px auto;
+    font-size: var(--B);
+    font-family: var(--QUAT);
+    color: var(--light_gray);
+    font-weight: 400;
+}
+.formulario input{
+    width: 25%;
+    padding: 7px;
+    margin: 25px 30px;
+    border: none; 
+    font-size: 15px;
+    font-weight: 400;
+    font-family: var(--QUAT);
+    border-bottom: 3px solid var(--light_gray);
+    background: transparent;
+    color: var(--white);
+}
+.formulario input:focus{
+    background: linear-gradient(to bottom,transparent, var(--dark_sky_blue));
+    outline:none;
+    border-bottom: 3px solid var(--orange_name);
+    color: var(--white);
+}
+.formulario input::selection{
+    color: var(--black);
+    background-color: var(--sky_blue_gray);
+}
+.formulario input::placeholder{
+    color: var(--light_gray);
+}
+.formulario #Category,.formulario #City{
+    background-image: url(imgs/logo_1.png);
+    background-repeat: no-repeat;
+    background-position: 95% center;
+}
+.formulario #Category:hover,.formulario #City:hover{
+    cursor: pointer;
+}
+.formulario #Email{
+    width: 55%;
+}
+.formulario #Message{
+    width: 55%;   
+    padding-bottom: 80px;
+}
+.formulario #button{
+    height: 60px;
+    width: 200px;
+    color: var(--white);
+    background-color: var(--dark_orange);
+    border: 2px solid var(--dark_orange1);
+    font-size: 15px;
+    font-family: var(--QUAT);
+    font-weight: 400;
+    position: absolute;
+    bottom: 50px;
+    right: 320px;
+}
+.formulario #button:hover{
+    cursor: pointer;
+    transition: all 2s;
+    color: var(--black);
+    border-color: var(--orange_name);
+    background-color: var(--dark_orange1);
+}
+.formulario #button:focus{
+    transition: all 1s;
+    color: var(--white);
+    border-color: var(--dark_orange1);
+    background-color: var(--orange_name);
+}
+.formulario #button::selection{
+    color: var(--black);
+    background-color: var(--sky_blue_gray);
+}
+@media screen and (min-width: 800px) AND (max-width:1000px){
+    .formulario input{
+        width: 23%;
+    }
+}
+@media (max-width: 799px){
+   .fondo3{
+    height: 1000px;
+    } 
+    .aside p{
+        width: 75%;
+    }
+    .formulario input{
+        width: 80%;
+    }
+    .formulario #Email{
+        width: 80%;
+    }
+    .formulario #Message{
+        width: 80%;   
+        padding-bottom: 80px;
+    }
+    .formulario #button{
+        margin-top: 20px;
+        position: inherit;
+    }   
+}
+@media (max-width: 799px){
+    .fondo3{
+        height: 1100px;
+        } 
+    .formulario input{
+        margin: 25px 0;
+        border: none; 
+        font-size: 15px;
+        font-weight: 400;
+        font-family: var(--QUAT);
+        border-bottom: 3px solid var(--light_gray);
+        background: transparent;
+        color: var(--white);
+    }
+}
